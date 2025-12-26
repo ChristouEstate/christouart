@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christou.Art – Galerie</title>
+  <title>Christou.Art – Das expressive Erbe</title>
   <style>
     body {
       margin: 0;
@@ -21,6 +21,50 @@
       margin: 0;
       font-size: 2.5rem;
       font-weight: normal;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 1rem;
+      background: url('hero_christou.jpg') center/cover no-repeat;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 0;
+      max-width: 700px;
+      text-align: center;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      max-width: 600px;
+      text-align: center;
+    }
+    .intro-section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .intro-section h3 {
+      font-size: 1.75rem;
+    }
+    .intro-section p {
+      font-size: 1.1rem;
+      color: #555;
     }
     .gallery-section {
       padding: 4rem 2rem;
@@ -48,23 +92,51 @@
     .gallery-grid img:hover {
       transform: scale(1.03);
     }
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Christou.Art</h1>
+    <nav>
+      <a href="#werk">Werk</a>
+      <a href="#ausstellung">Ausstellung</a>
+      <a href="#biografie">Biografie</a>
+      <a href="#archiv">Archiv</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
+
+  <section class="hero">
+    <h2>Public Secrets – Das expressive Erbe von Christou</h2>
+    <p>Erstmals zugänglich: Das umfangreiche Werk der 2010 verstorbenen Künstlerin –  Vision, Skizze, Verstörung.</p>
+  </section>
+
+  <section class="intro-section">
+    <h3>„Working out Reality“</h3>
+    <p>Über 150 großformatige Gemälde, hunderte Skizzen, Figuren, Gesichter, Körper – eine Welt aus Linien und Farben. Exklusiv bei: The Breeder Gallery, Athen.</p>
+  </section>
+
   <section class="gallery-section">
     <h3>Werke</h3>
     <div class="gallery-grid">
       <a href="assets/images/CafeNeion01.jpg" target="_blank"><img src="assets/images/CafeNeion01.jpg" alt="Werk 1" /></a>
       <a href="assets/images/Homeless.jpg" target="_blank"><img src="assets/images/Homeless.jpg" alt="Werk 2" /></a>
       <a href="assets/images/IMG_4982.jpeg" target="_blank"><img src="assets/images/IMG_4982.jpeg" alt="Werk 3" /></a>
-      <!-- Weitere Platzhalter -->
       <a href="assets/images/GarlicSeller.jpg" target="_blank"><img src="assets/images/GarlicSeller.jpg" alt="Werk 4" /></a>
       <a href="assets/images/Mary_K.jpg" target="_blank"><img src="assets/images/Mary_K.jpg" alt="Werk 5" /></a>
       <a href="assets/images/IMG_5087.jpeg" target="_blank"><img src="assets/images/IMG_5087.jpeg" alt="Werk 6" /></a>
     </div>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Christou Estate</p>
+    <p>Design: Häusler Studio</p>
+  </footer>
 </body>
 </html>
