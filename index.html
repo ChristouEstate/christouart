@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christou.Art – Das expressive Erbe</title>
+  <title>Christou.Art – The Expressive Legacy</title>
   <style>
     body {
       margin: 0;
@@ -30,6 +30,32 @@
       text-decoration: none;
       color: #333;
       font-weight: bold;
+    }
+    .gallery-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-section h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.03);
     }
     .hero {
       display: flex;
@@ -66,32 +92,6 @@
       font-size: 1.1rem;
       color: #555;
     }
-    .gallery-section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .gallery-section h3 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-    .gallery-grid img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      transition: transform 0.3s ease;
-    }
-    .gallery-grid img:hover {
-      transform: scale(1.03);
-    }
     footer {
       background: #eee;
       text-align: center;
@@ -104,35 +104,41 @@
   <header>
     <h1>Christou.Art</h1>
     <nav>
-      <a href="#werk">works</a>
-      <a href="#ausstellung">exhibitions</a>
-      <a href="#biografie">biography</a>
-      <a href="#archiv">archive</a>
-      <a href="#kontakt">contact</a>
+      <a href="#work">Work</a>
+      <a href="#exhibition">Exhibition</a>
+      <a href="#biography">Biography</a>
+      <a href="#archive">Archive</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <section class="gallery-section">
+    <h3>Selected Works</h3>
+    <div class="gallery-grid">
+      <a href="assets/images/CafeNeion01.jpg" target="_blank"><img src="assets/images/CafeNeion01.jpg" alt="Work 1" /></a>
+      <a href="assets/images/Homeless.jpg" target="_blank"><img src="assets/images/Homeless.jpg" alt="Work 2" /></a>
+      <a href="assets/images/IMG_4982.jpeg" target="_blank"><img src="assets/images/IMG_4982.jpeg" alt="Work 3" /></a>
+      <a href="assets/images/GarlicSeller.jpg" target="_blank"><img src="assets/images/GarlicSeller.jpg" alt="Work 4" /></a>
+      <a href="assets/images/Mary_K.jpg" target="_blank"><img src="assets/images/Mary_K.jpg" alt="Work 5" /></a>
+      <a href="assets/images/IMG_5087.jpeg" target="_blank"><img src="assets/images/IMG_5087.jpeg" alt="Work 6" /></a>
+    </div>
+  </section>
+
   <section class="hero">
-    <h2>the expressive heritage of christou</h2>
-    <p>Accessible for the first time - a corpus of sketches, paintings, watercolors/ visions, insights, lines</p>
+    <h2>Public Secrets – The Expressive Legacy of Christou</h2>
+    <p>For the first time: The extensive work of the artist who passed away in 2010 – vision, sketch, disturbance.</p>
   </section>
 
   <section class="intro-section">
-    <h3>„Working out Reality“</h3>
-    <p>more than 150 paintings in large formats, hundereds of sketches, figures, faces, bodies – a whole social world in colors and lines. 
-      exclusively at The Breeder Gallery, Athen.</p>
-  </div>
-  <div class="gallery-small">
-    <a href="assets/images/CafeNeion01.jpg"><img src="assets/images/CafeNeion01.jpg" alt="Werk 1"></a>
-    <a href="assets/images/Homeless.jpg"><img src="assets/images/Homeless.jpg" alt="Werk 2"></a>
-    <a href="assets/images/IMG_4982.jpeg"><img src="assets/images/IMG_4982.jpeg" alt="Werk 3"></a>
-  </div>
-</section>
-
+    <h3>“Working out Reality”</h3>
+    <p>More than 150 large-scale paintings, hundreds of sketches, figures, faces, bodies – a whole social world in lines and colors. Exclusively at: The Breeder Gallery, Athens.</p>
+  </section>
 
   <footer>
+    <p>exclusively represented by : The Breeder Gallery, Athens<p>
     <p>&copy; 2025 Christou Estate</p>
     <p>Design: Häusler Studio</p>
   </footer>
 </body>
 </html>
+
