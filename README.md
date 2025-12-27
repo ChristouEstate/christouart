@@ -1,6 +1,6 @@
 # Christou.Art
 
-Christou.Art is a static HTML website presenting the expressive artistic legacy of the late painter Christou (†2010).
+Christou.Art is a static HTML website presenting the expressive artistic legacy of the late painter Christou (†2009).
 The site was created to accompany her posthumous exhibition *Public Secrets* and to serve as a digital archive.
 
 ## Deployment
