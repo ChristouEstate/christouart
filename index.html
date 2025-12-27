@@ -10,6 +10,35 @@
       font-family: 'Helvetica Neue', sans-serif;
       background: #f8f6f3;
       color: #1c1c1c;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    aside.gallery-sidebar {
+      width: 160px;
+      background: #f1f1f1;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-left: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    aside.gallery-sidebar img {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+    aside.gallery-sidebar img:hover {
+      transform: scale(1.05);
+    }
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
     header {
       background: #ffffff;
@@ -30,32 +59,6 @@
       text-decoration: none;
       color: #333;
       font-weight: bold;
-    }
-    .gallery-section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .gallery-section h3 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.8rem;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-    .gallery-grid img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      transition: transform 0.3s ease;
-    }
-    .gallery-grid img:hover {
-      transform: scale(1.03);
     }
     .hero {
       display: flex;
@@ -97,48 +100,49 @@
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Christou.Art</h1>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#exhibition">Exhibition</a>
-      <a href="#biography">Biography</a>
-      <a href="#archive">Archive</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <aside class="gallery-sidebar">
+    <a href="assets/images/CafeNeion01.jpg" target="_blank"><img src="assets/images/CafeNeion01.jpg" alt="Work 1" /></a>
+    <a href="assets/images/Homeless.jpg" target="_blank"><img src="assets/images/Homeless.jpg" alt="Work 2" /></a>
+    <a href="assets/images/IMG_4982.jpeg" target="_blank"><img src="assets/images/IMG_4982.jpeg" alt="Work 3" /></a>
+    <a href="assets/images/GarlicSeller.jpg" target="_blank"><img src="assets/images/GarlicSeller.jpg" alt="Work 4" /></a>
+    <a href="assets/images/Mary_K.jpg" target="_blank"><img src="assets/images/Mary_K.jpg" alt="Work 5" /></a>
+    <a href="assets/images/IMG_5087.jpeg" target="_blank"><img src="assets/images/IMG_5087.jpeg" alt="Work 6" /></a>
+  </aside>
+  <div class="main-content">
+    <header>
+      <h1>Christou.Art</h1>
+      <nav>
+        <a href="#works">Work</a>
+        <a href="#exhibition">Exhibition</a>
+        <a href="#biography">Biography</a>
+        <a href="#archive">Archive</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section class="gallery-section">
-    <h3>Selected Works</h3>
-    <div class="gallery-grid">
-      <a href="assets/images/CafeNeion01.jpg" target="_blank"><img src="assets/images/CafeNeion01.jpg" alt="Work 1" /></a>
-      <a href="assets/images/Homeless.jpg" target="_blank"><img src="assets/images/Homeless.jpg" alt="Work 2" /></a>
-      <a href="assets/images/IMG_4982.jpeg" target="_blank"><img src="assets/images/IMG_4982.jpeg" alt="Work 3" /></a>
-      <a href="assets/images/GarlicSeller.jpg" target="_blank"><img src="assets/images/GarlicSeller.jpg" alt="Work 4" /></a>
-      <a href="assets/images/Mary_K.jpg" target="_blank"><img src="assets/images/Mary_K.jpg" alt="Work 5" /></a>
-      <a href="assets/images/IMG_5087.jpeg" target="_blank"><img src="assets/images/IMG_5087.jpeg" alt="Work 6" /></a>
-    </div>
-  </section>
+    <section class="hero">
+      <h2>Public Secrets – The Expressive Legacy of Christou</h2>
+      <p>For the first time: The extensive work of the artist who passed away in 2010 – vision, sketch, disturbance.</p>
+    </section>
 
-  <section class="hero">
-    <h2>Public Secrets – The Expressive Legacy of Christou</h2>
-    <p>For the first time: The extensive work of the artist who passed away in 2010 – vision, sketch, disturbance.</p>
-  </section>
+    <section class="intro-section">
+      <h3>"Working out Reality"</h3>
+      <p>More than 150 large-scale paintings, hundreds of sketches, figures, faces, bodies – a world of lines and colors. Exclusively at The Breeder Gallery, Athens.</p>
+    </section>
 
-  <section class="intro-section">
-    <h3>“Working out Reality”</h3>
-    <p>More than 150 large-scale paintings, hundreds of sketches, figures, faces, bodies – a whole social world in lines and colors. Exclusively at: The Breeder Gallery, Athens.</p>
-  </section>
-
-  <footer>
-    <p>exclusively represented by : The Breeder Gallery, Athens<p>
-    <p>&copy; 2025 Christou Estate</p>
-    <p>Design: Häusler Studio</p>
-  </footer>
+    <footer>
+      <p>Alexandras Work is exclusively represented by the Breeder Gallery, Athens
+      https://thebreedersystem.com/</p>
+      <p>&copy; 2025 Christou Estate</p>
+      <p>Design: Häusler Studio</p>
+    </footer>
+  </div>
 </body>
 </html>
+
 
