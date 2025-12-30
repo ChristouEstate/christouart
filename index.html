@@ -152,6 +152,13 @@
     .catalogue-access a:hover {
       background: #444;
     }
+    .gallery-button.disabled {
+  background: #888;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
   </style>
 </head>
 <body>
@@ -191,7 +198,7 @@
   <h3>Werkkatalog</h3>
   <p>Sehen Sie Alexandras Werke in der Galerie oder blättern Sie durch den vollständigen Katalog.</p>
   <div class="button-group">
-    <a href="gallery.html" class="gallery-button">Galerie online ansehen</a>
+    <a class="gallery-button disabled">Gallery (coming soon)</a>
     <a href="catalogue-viewer.html" class="pdf-button">PDF durchblättern</a>
   </div>
 </section>
