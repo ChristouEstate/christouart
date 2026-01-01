@@ -158,6 +158,17 @@
   pointer-events: none;
   opacity: 0.6;
 }
+.gallery-button.disabled,
+.pdf-button.disabled {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ccc;
+  color: #666;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: not-allowed;
+}
 
   </style>
 </head>
@@ -196,10 +207,10 @@
   
     <section class="catalogue-access">
   <h3>Catalogue</h3>
-  <p>See Alexandra's works in the gallery or browse through the complete catalog.</p>
+  <p>Browse the online gallery or view the complete catalogue as soon as it’s available.</p>
   <div class="button-group">
-    <a class="gallery-button disabled">Gallery (coming soon)</a>
-    <a href="catalogue-viewer.html" class="pdf-button">PDF durchblättern</a>
+    <span class="gallery-button disabled">View Gallery (coming soon)</span>
+    <span class="pdf-button disabled">Flip Through PDF (coming soon)</span>
   </div>
 </section>
 
