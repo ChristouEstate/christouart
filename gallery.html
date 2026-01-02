@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christou · Catalogue</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background: #f8f6f3;
+      color: #1c1c1c;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: normal;
+    }
+
+    .catalogue-pair {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: 4rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .catalogue-pair .image {
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+
+    .catalogue-pair .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .catalogue-pair .text {
+      flex: 1 1 50%;
+      max-width: 50%;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .catalogue-pair .text h3 {
+      font-size: 1.3rem;
+      margin-top: 0;
+    }
+
+    .text p {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Catalogue</h1>
+
+  <section class="catalogue-pair">
+    <div class="image">
+      <img src="assets/katalogbilder/seite01.jpg" alt="Painting 1 by Christou" />
+    </div>
+    <div class="text">
+      <h3>Image No. 1 – Untitled (Woman with Strelitzias)  
+        <br>Oil on canvas, approx. 80 × 80 cm  
+        <br>Undated (presumably early 1990s)</h3>
+
+      <p><strong>DE:</strong> [Deutscher Text hier einfügen]</p>
+      <p><strong>EN:</strong> [Englischer Text hier einfügen]</p>
+    </div>
+  </section>
+
+  <!-- Hier weitere catalogue-pair Sektionen für Bild 2, 3 etc. einfügen -->
+
+</body>
+</html>
 
