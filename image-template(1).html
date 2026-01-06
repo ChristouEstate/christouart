@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christou · Catalogue Template</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background: #f8f6f3;
+      color: #1c1c1c;
+      padding: 2rem;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    .image {
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .text {
+      flex: 1 1 50%;
+      max-width: 50%;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .text h3 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+    .label {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .nav {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image">
+      <img src="assets/catalogue/xx.jpg" alt="Christou Image" />
+    </div>
+    <div class="text">
+      <h3>Image No. XX – [Title]</h3>
+      <h3>[Medium, size, date]</h3>
+
+      <div class="label">DE:</div>
+      <p>[Deutscher Beschreibungstext]</p>
+
+      <hr />
+
+      <div class="label">EN:</div>
+      <p>[English description text]</p>
+    </div>
+  </div>
+
+  <div class="nav">
+    <a href="imageXX-prev.html">← Previous</a>
+    <a href="index.html">Home</a>
+    <a href="imageXX-next.html">Next →</a>
+  </div>
+</body>
+</html>
