@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christou · Image 02</title>
+  <title>Christou · Catalogue Page</title>
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -13,76 +13,78 @@
       padding: 2rem;
     }
 
-    .container {
-      max-width: 1100px;
+    .catalogue-page {
+      max-width: 1000px;
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3rem;
     }
 
-    .image {
-      flex: 1 1 45%;
+    .catalogue-image {
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    .image img {
-      width: 100%;
+    .catalogue-image img {
+      max-width: 100%;
       height: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 4px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .text {
-      flex: 1 1 50%;
-      font-size: 1.05rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #111;
     }
 
     .text h3 {
+      font-size: 1.15rem;
+      font-weight: bold;
       margin-top: 0;
-      font-size: 1.25rem;
-      font-weight: normal;
     }
 
     .text p {
-      margin: 0 0 1rem 0;
+      margin: 0 0 0.8rem 0;
       text-align: justify;
     }
 
-    .label {
-      font-weight: bold;
-      margin-top: 1.5rem;
+    .text hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 1.2rem 0;
     }
 
-    .nav {
+    .nav-links {
+      margin-top: 3rem;
       text-align: center;
-      margin-top: 4rem;
     }
 
-    .nav a {
+    .nav-links a {
+      display: inline-block;
       margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      background: #1c1c1c;
+      color: white;
       text-decoration: none;
-      color: #1c1c1c;
+      border-radius: 4px;
       font-weight: bold;
     }
 
-    .nav a:hover {
-      text-decoration: underline;
+    .nav-links a:hover {
+      background: #444;
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <div class="image">
-      <img src="assets/catalogue/02.jpg" alt="Christou Image 02" />
+  <div class="catalogue-page">
+    
+    <div class="catalogue-image">
+      <img src="assets/catalogue/03.jpg" alt="Painting by Christou" />
     </div>
 
     <div class="text">
-      <h3>Bild Nr 3 Untitled Sophia (Rückenakt)
-        <br>Öl auf Leinwand, ca. 80 × 120 cm
-        <br>o. J. (vermutlich Athen, 1980er Jahre)
-      </h3>
+      <h3>Image No. 3 – Sophia (back nude)
+    <br>Oil on canvas, approx. 80 × 120 cm<br>
+      Undated (presumably , late 1980s)</h3>
 
       <div class="label">DE:</div>
       <p>Dieses Werk zeigt die Tochter der Künstlerin – nicht als Porträt, sondern als Erscheinung von Körper, Farbe und Erinnerung. Die Figur ist von hinten dargestellt, leicht gedreht, eine Hand auf der Hüfte. Es gibt keine narrative Geste, kein Umfeld, keinen Raum, der sie stützt: hier sind nur Körper, Licht, Pigment.
@@ -105,7 +107,7 @@ Keywords: Motherhood, body, memory, closeness and distance, female identity, ear
   </div>
 
   <div class="nav">
-    <a href="image10.html">← Previous</a>
+    <a href="image02.html">← Previous</a>
     <a href="index.html">Home</a>
     <a href="image04.html">Next →</a>
   </div>
