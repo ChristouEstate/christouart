@@ -49,7 +49,7 @@ body {
   max-width: 900px;
   margin: 1.2rem auto 0;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.0;
   color: #111;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .text-block p {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.25rem;
   text-align: left;
 }
 
