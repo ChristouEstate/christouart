@@ -32,6 +32,7 @@ body {
 
 .catalogue-image img {
   width: 100%;
+  max-width: 800px;   /* ← HIER die Bildgröße kontrollieren */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -39,17 +40,20 @@ body {
   border-radius: 4px;
 }
 
+
 /* ================================
    Textblock
 ================================ */
 
 .text-block {
-  max-width: 480px;          /* ↓ schmaler als Bild */
-  margin: 1.2rem auto 0;     /* ↓ weniger vertikaler Abstand */
+  width: 100%;
+  max-width: 900px;
+  margin: 1.2rem auto 0;
   font-size: 0.95rem;
   line-height: 1.6;
   color: #111;
 }
+
 
 .text-block h3 {
   font-size: 1.15rem;        /* minimal ruhiger */
