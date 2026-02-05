@@ -38,13 +38,12 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 4px;
 }
-}
 
 /* ================================
    Textblock
 ================================ */
 
-.text {
+.text-block {
   max-width: 480px;          /* ↓ schmaler als Bild */
   margin: 1.2rem auto 0;     /* ↓ weniger vertikaler Abstand */
   font-size: 0.95rem;
@@ -52,18 +51,18 @@ body {
   color: #111;
 }
 
-.text h3 {
+.text-block h3 {
   font-size: 1.15rem;        /* minimal ruhiger */
   font-weight: 500;
   margin: 0 0 0.4rem;
 }
 
-.text p {
+.text-block p {
   margin: 0 0 0.8rem;
   text-align: left;
 }
 
-.text hr {
+.text-block hr {
   border: none;
   border-top: 1px solid #ccc;
   margin: 1.1rem 0;
