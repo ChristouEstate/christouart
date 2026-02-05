@@ -4,12 +4,16 @@
    Basis
 ================================ */
 
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 0;
-  background: #f8f6f3;
-  color: #1c1c1c;
+  body{
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
 }
+
 
 /* ================================
    Seitencontainer
