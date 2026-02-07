@@ -19,16 +19,22 @@ header nav {
 }
 
 /* Ruhiger Textblock */
-main.documents {
+/* Ruhiger Textblock */
+main.docs {
   max-width: 72ch;
   margin: 0 auto;
   padding: 3rem 1.25rem 3rem;
-  line-height: 1.05;
+  line-height: 1.35; /* empfehlenswerter als 1.05 */
+  grid-column: 1 / -1;
+  width: 100%;
 }
 
-main.documents h2 { margin: 0 0 1.5rem 0; }
-main.documents h3 { margin: 0 0 .6rem 0; }
-main.documents p  { margin: 0; }
+}
+
+main.docs h2 { margin: 0 0 1.5rem 0; }
+main.docs h3 { margin: 0 0 .6rem 0; }
+main.docs p  { margin: 0; }
+
 
 .doclist { list-style: none; margin: 0; padding: 0; }
 .docitem { margin: 0 0 1.2rem 0; }
@@ -36,3 +42,7 @@ main.documents p  { margin: 0; }
 .docmeta { opacity: .7; font-size: .95em; }
 .docnote { opacity: .7; font-size: .9em; margin-top: .35rem; }
 .doclegal{ opacity: .7; font-size: .85em; margin-top: 2.25rem; }
+body.page-documents {
+  display: block;   /* überschreibt globales body{display:flex} */
+}
+
