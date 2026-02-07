@@ -1,0 +1,55 @@
+/* christouart/documents/docs.css */
+
+/* 1) Grundlayout: ruhige Textseite */
+main.docs {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 3rem;
+  line-height: 1.05;
+}
+
+main.docs p { margin: 0; }
+main.docs h2 { margin: 0 0 1.25rem 0; }
+main.docs h3 { margin: 0 0 .6rem 0; }
+
+/* 2) Header/Nav: stabil, nicht umbrechen */
+header nav{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+/* Wenn Viewport schmal: dann darf es umbrechen, aber kontrolliert */
+@media (max-width: 720px){
+  header nav{
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+/* 3) Interview: Video sauber als Block, nicht "irgendwo links" */
+.video-wrapper{
+  margin: 1.1rem 0 1.2rem 0;
+}
+
+.video-wrapper iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+}
+
+/* 4) Captions/Legal: zurückhaltend */
+.videocaption{
+  margin-top: .3rem;
+  opacity: .7;
+  font-size: .95em;
+}
+
+.videolegal{
+  margin-top: 1.6rem;
+  opacity: .7;
+  font-size: .85em;
+}
