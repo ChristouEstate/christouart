@@ -1,55 +1,63 @@
-/* christouart/documents/docs.css */
+/* documents/docs.css */
 
-/* 1) Grundlayout: ruhige Textseite */
-main.docs {
-  max-width: 72ch;
-  margin: 0 auto;
-  padding: 3rem 1.25rem 3rem;
-  line-height: 1.05;
+/* 0) System-Font (SF Pro auf macOS) + ruhiger Grundsatz */
+:root{
+  --text: 72ch;
 }
 
-main.docs p { margin: 0; }
-main.docs h2 { margin: 0 0 1.25rem 0; }
-main.docs h3 { margin: 0 0 .6rem 0; }
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
 
-/* 2) Header/Nav: stabil, nicht umbrechen */
+/* 1) Kill-Switch gegen Landing-Layout: keine Splits, keine Grids */
+header, main, footer{
+  width: auto !important;
+  max-width: none !important;
+  float: none !important;
+}
+
+/* 2) Header + Nav wie ein ruhiger Kopf, zentriert und einspaltig */
+header{
+  max-width: var(--text) !important;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 1.25rem;
+  text-align: center;
+}
+
+header h1{ margin: 0 0 0.75rem 0; }
+
 header nav{
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: nowrap;
+  gap: 1.25rem;
   white-space: nowrap;
 }
 
-/* Wenn Viewport schmal: dann darf es umbrechen, aber kontrolliert */
-@media (max-width: 720px){
-  header nav{
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+/* 3) Hauptinhalt: echte einspaltige Textseite */
+main.docs{
+  max-width: var(--text);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  line-height: 1.05;
 }
 
-/* 3) Interview: Video sauber als Block, nicht "irgendwo links" */
-.video-wrapper{
-  margin: 1.1rem 0 1.2rem 0;
-}
+main.docs p{ margin: 0; }
 
-.video-wrapper iframe{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  display: block;
-}
+main.docs section{ margin: 0 0 2rem 0; }
 
-/* 4) Captions/Legal: zurückhaltend */
-.videocaption{
-  margin-top: .3rem;
-  opacity: .7;
-  font-size: .95em;
-}
+.docmeta{ opacity: .7; font-size: .95em; }
+.docnote{ opacity: .7; font-size: .9em; margin-top: .35rem; }
+.doclegal{ opacity: .7; font-size: .85em; margin-top: 2.25rem; }
 
-.videolegal{
-  margin-top: 1.6rem;
-  opacity: .7;
-  font-size: .85em;
+/* Links: ruhig, nicht knallig default-blau */
+main.docs a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: .05em;
 }
+main.docs a:hover{ opacity: .75; }
