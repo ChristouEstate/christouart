@@ -1,28 +1,123 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Documents — Christou.Art</title>
-  <link rel="stylesheet" href="/catalogue-style.css">
+
+  <!-- nutzt dein bestehendes Site-Design -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- kleine documents-spezifische Ergänzung (unten) -->
+  <style>
+    /* typografische Ruhe passend zu Katalogsatz */
+    .documents {
+      max-width: 72ch;
+      line-height: 1.05;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .documents p { margin: 0; }
+
+    .documents h2 {
+      margin: 0 0 1.25rem 0;
+      font-weight: 600;
+    }
+
+    .documents section { margin: 0 0 2rem 0; }
+
+    .documents h3 {
+      margin: 0 0 0.6rem 0;
+      font-weight: 600;
+    }
+
+    .doclist { margin: 0; padding: 0; list-style: none; }
+
+    .docitem { margin: 0 0 1.1rem 0; }
+
+    .docitem a {
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.05em;
+    }
+
+    .docmeta {
+      opacity: 0.7;
+      font-size: 0.95em;
+    }
+
+    .docnote {
+      opacity: 0.7;
+      font-size: 0.9em;
+      margin-top: 0.35rem;
+    }
+
+    .doclegal {
+      opacity: 0.7;
+      font-size: 0.85em;
+      margin-top: 2.25rem;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- gleiche Header-Navigation wie Startseite -->
   <header>
     <h1>Christou.Art</h1>
+    <nav>
+      <a href="/#works">Work</a>
+      <a href="/#exhibition">Exhibition</a>
+      <a href="/#biography">Biography</a>
+      <a href="/documents/index.html" aria-current="page">Documents</a>
+      <a href="/archive/index.html" target="_blank" rel="noopener">Archive</a>
+      <a href="/#contact">Contact</a>
+    </nav>
   </header>
 
-  <main class="catalogue">
+  <main class="documents">
     <h2>Documents</h2>
 
-    <section>
-      <h3>Interview</h3>
-      <p>Video, 2023</p>
+    <!-- Interview -->
+    <section aria-labelledby="docs-interview">
+      <h3 id="docs-interview">Interview</h3>
+      <ul class="doclist">
+        <li class="docitem">
+          <p>
+            <a href="/documents/interview.html">Alexandra Christou — Artists@Home</a>
+          </p>
+          <p class="docmeta">Video interview (Greek), English subtitles • 2023</p>
+          <p class="docnote">Viewing only. No download or reuse without permission.</p>
+        </li>
+      </ul>
     </section>
 
-    <section>
-      <h3>Press</h3>
-      <p>Selected articles</p>
+    <!-- Press -->
+    <section aria-labelledby="docs-press">
+      <h3 id="docs-press">Press</h3>
+      <ul class="doclist">
+        <li class="docitem">
+          <p><a href="/documents/press.html">Selected articles and reviews</a></p>
+          <p class="docmeta">Newspaper and journal material • PDF / text</p>
+        </li>
+      </ul>
     </section>
+
+    <!-- Texts -->
+    <section aria-labelledby="docs-texts">
+      <h3 id="docs-texts">Texts</h3>
+      <ul class="doclist">
+        <li class="docitem">
+          <p><a href="/documents/texts.html">Statements and conversations</a></p>
+          <p class="docmeta">Notes, statements, interviews (selected)</p>
+        </li>
+      </ul>
+    </section>
+
+    <p class="doclegal">
+      © Christou Estate. All rights reserved. This material may not be downloaded, reproduced,
+      or used in any form without prior written permission.
+    </p>
   </main>
 </body>
 </html>
