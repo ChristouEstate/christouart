@@ -61,3 +61,6 @@ main.docs a{
   padding-bottom: .05em;
 }
 main.docs a:hover{ opacity: .75; }
+body.page-documents {
+  flex-direction: column;
+}
