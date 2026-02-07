@@ -82,6 +82,7 @@
 }
 
 .nav-links a {
+  transition: background-color 0.2s ease;
   display: inline-block;
   margin: 0 0.75rem;
   padding: 0.5rem 1rem;
@@ -91,8 +92,4 @@
   border-radius: 4px;
   font-size: 0.85rem;
   font-weight: 500;
-}
-
-.nav-links a:hover {
-  background: #444;
 }
