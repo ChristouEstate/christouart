@@ -1,0 +1,38 @@
+/* documents/documents.css */
+
+body {
+  background: #fff;
+}
+
+/* Header nicht "herohaft" wirken lassen (falls style.css große Abstände setzt) */
+header {
+  position: static;
+  box-shadow: none;
+}
+
+/* Navigation stabil halten (kein komisches Umbrechen) */
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* Ruhiger Textblock */
+main.documents {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 3rem;
+  line-height: 1.05;
+}
+
+main.documents h2 { margin: 0 0 1.5rem 0; }
+main.documents h3 { margin: 0 0 .6rem 0; }
+main.documents p  { margin: 0; }
+
+.doclist { list-style: none; margin: 0; padding: 0; }
+.docitem { margin: 0 0 1.2rem 0; }
+
+.docmeta { opacity: .7; font-size: .95em; }
+.docnote { opacity: .7; font-size: .9em; margin-top: .35rem; }
+.doclegal{ opacity: .7; font-size: .85em; margin-top: 2.25rem; }
