@@ -95,6 +95,46 @@
       margin: 0 auto;
       text-align: center;
     }
+* ================================
+   Exhibition
+   ================================ */
+.exhibitions{
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.exhibition-item{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.exhibition-item h4{
+  margin: 0 0 .35rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.exh-meta{
+  margin: 0 0 .75rem 0;
+  opacity: .75;
+  font-size: .95rem;
+}
+
+.exh-text{
+  margin: 0 0 .75rem 0;
+  color: #444;
+}
+
+.exh-links a{
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: .05em;
+}
+.exh-links a:hover{
+  opacity: .75;
+}
 
     footer {
       background: #eee;
@@ -164,21 +204,64 @@
 
   <div class="main-content">
     <header>
-      <h1>Christou.Art</h1>
-      <nav>
-        <a href="#works">Work</a>
-        <a href="#exhibition">Exhibition</a>
-        <a href="#biography">Biography</a>
-        <a href="/documents/index.html">Documents</a>
-        <a href="archive/index.html" target="_blank" rel="noopener">Archive</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <h1>Christou.Art</h1>
+  <nav>
+    <a href="#works">Work</a>
+    <a href="#exhibition">Exhibition</a>
+    <a href="#biography">Biography</a>
+    <a href="/documents/index.html">Documents</a>
+    <a href="archive/index.html" target="_blank" rel="noopener">Archive</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section class="hero">
-      <h2>The Expressive Legacy of Christou</h2>
-      <p>For the first time: The extensive work of the artist who passed away in 2009 – vision, sketch, disturbance.</p>
-    </section>
+<section class="hero">
+  <h2>The Expressive Legacy of Christou</h2>
+  <p>
+    For the first time: The extensive work of the artist who passed away in 2009 –
+    vision, sketch, disturbance.
+  </p>
+</section>
+
+<section id="exhibition" class="intro-section">
+  <h3>Exhibition</h3>
+
+  <div class="exhibitions">
+    <article class="exhibition-item">
+      <h4>Alexandra Christou — <em>Taverna</em></h4>
+      <p class="exh-meta">
+        Sadie Coles HQ (8 Bury Street), London • 29 January — 11 April 2026
+      </p>
+      <p class="exh-text">
+        Solo exhibition presenting paintings and drawings from the 1990s,
+        centred on scenes of cafés, markets and island life.
+      </p>
+      <p class="exh-links">
+        <a href="https://www.sadiecoles.com/exhibitions/taverna"
+           target="_blank" rel="noopener">
+          Sadie Coles HQ: Exhibition page →
+        </a>
+      </p>
+    </article>
+
+    <article class="exhibition-item">
+      <h4>Paris Internationale 2025 — The Breeder</h4>
+      <p class="exh-meta">
+        Paris, France • 22 — 26 October 2025
+      </p>
+      <p class="exh-text">
+        Presented by The Breeder (Athens) at Paris Internationale 2025.
+      </p>
+      <p class="exh-links">
+        <a href="https://thebreedersystem.com/activity/paris-internationale-2025/"
+           target="_blank" rel="noopener">
+          The Breeder: Activity page →
+        </a>
+      </p>
+    </article>
+  </div>
+</section>
+
 
     <section class="intro-section">
       <h3>"Working out Reality"</h3>
