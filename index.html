@@ -1,19 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christou.Art – An Expressive Legacy</title>
-</head>
+
   <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
       background: #f8f6f3;
       color: #1c1c1c;
+    }
+
+    /* Nur Hauptseite mit Sidebar */
+    body.has-sidebar {
       display: flex;
       flex-direction: row-reverse;
     }
+
     aside.gallery-sidebar {
       width: 160px;
       background: #f1f1f1;
@@ -27,20 +32,21 @@
       height: 100vh;
       overflow-y: auto;
     }
+
     aside.gallery-sidebar img {
       width: 100%;
       border: 1px solid #ccc;
       border-radius: 4px;
       transition: transform 0.3s ease;
     }
-    aside.gallery-sidebar img:hover {
-      transform: scale(1.05);
-    }
-    .main-content {
+    aside.gallery-sidebar img:hover { transform: scale(1.05); }
+
+    body.has-sidebar .main-content {
       flex: 1;
       display: flex;
       flex-direction: column;
     }
+
     header {
       background: #ffffff;
       padding: 2rem;
@@ -52,15 +58,14 @@
       font-size: 2.5rem;
       font-weight: normal;
     }
-    nav {
-      margin-top: 1rem;
-    }
+    nav { margin-top: 1rem; }
     nav a {
       margin: 0 1rem;
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
+
     .hero {
       display: flex;
       flex-direction: column;
@@ -83,19 +88,14 @@
       max-width: 600px;
       text-align: center;
     }
+
     .intro-section {
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: 0 auto;
       text-align: center;
     }
-    .intro-section h3 {
-      font-size: 1.75rem;
-    }
-    .intro-section p {
-      font-size: 1.1rem;
-      color: #555;
-    }
+
     footer {
       background: #eee;
       text-align: center;
@@ -103,35 +103,24 @@
       font-size: 0.9rem;
       margin-top: auto;
     }
+
     .archive-button {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background: #1c1c1c;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.archive-button:hover {
-  background: #444;
-}
-    /* Neue Klasse für Werkkatalog-Buttons */
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #1c1c1c;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .archive-button:hover { background: #444; }
+
     .catalogue-access {
       text-align: center;
       padding: 4rem 1rem;
     }
-
-    .catalogue-access h3 {
-      font-size: 1.75rem;
-    }
-
-    .catalogue-access p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-
     .catalogue-access .button-group {
       margin-top: 2rem;
       display: flex;
@@ -139,7 +128,6 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-
     .catalogue-access a {
       padding: 0.75rem 1.5rem;
       background: #1c1c1c;
@@ -149,98 +137,43 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
+    .catalogue-access a:hover { background: #444; }
 
-    .catalogue-access a:hover {
-      background: #444;
-    }
-    .gallery-button.disabled {
-  background: #888;
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.6;
-}
-.gallery-button.disabled,
-.pdf-button.disabled {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #ccc;
-  color: #666;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: not-allowed;
-}
-.catalogue-spread {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.catalogue-spread h3 {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.spread {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.spread img {
-  width: 45%;
-  height: auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 4px;
-}
     .estate-section {
-  max-width: 800px;
-  margin: 4rem auto 2rem auto;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #444;
-}
+      max-width: 800px;
+      margin: 4rem auto 2rem auto;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .estate-section p { margin: 0.75rem 0; line-height: 1.6; }
+  </style>
+</head>
 
-.estate-section h3 {
-  font-size: 1.4rem;
-  font-weight: normal;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.5px;
-}
-
-.estate-section p {
-  margin: 0.75rem 0;
-  line-height: 1.6;
-} 
-   
- </style>
- <head>
-   <body>
+<body class="has-sidebar">
   <aside class="gallery-sidebar">
-    <a href="assets/images/Mary_K.jpg" target="_blank"><img src="assets/images/Mary_K.jpg" alt="Work 1" /></a>
-    <a href="assets/images/1990_Study_Beggars.jpg" target="_blank"><img src="assets/images/1990_Study_Beggars.jpg" alt="Work 2" /></a>
-    <a href="assets/images/Crowd_Horror.jpg" target="_blank"><img src="assets/images/Crowd_Horror.jpg" alt="Work 3" /></a> 
-    <a href="assets/images/pighead.jpg" target="_blank"><img src="assets/images/pighead.jpg" alt="Work 4" /></a>
-    <a href="assets/images/Prostitute_Light.jpg" target="_blank"><img src="assets/images/Prostitute_Light.jpg" alt="Work 5" /></a>
-    <a href="assets/images/GarlicSellerAlt.jpg" target="_blank"><img src="assets/images/GarlicSellerAlt.jpg" alt="Work 6" /></a>
-    <a href="assets/images/GarlicSeller.jpg" target="_blank"><img src="assets/images/GarlicSeller.jpg" alt="Work 7" /></a>
-</aside>
-  <div class="main-content">
-   
-<header>
-  <h1>Christou.Art</h1>
-  <nav>
-    <a href="#works">Work</a>
-    <a href="#exhibition">Exhibition</a>
-    <a href="#biography">Biography</a>
-   <a href="/documents/index.html" aria-current="page">Documents</a>
-    <a href="archive/index.html" target="_blank" rel="noopener">Archive
-</a>
+    <a href="assets/images/Mary_K.jpg" target="_blank" rel="noopener"><img src="assets/images/Mary_K.jpg" alt="Work 1" /></a>
+    <a href="assets/images/1990_Study_Beggars.jpg" target="_blank" rel="noopener"><img src="assets/images/1990_Study_Beggars.jpg" alt="Work 2" /></a>
+    <a href="assets/images/Crowd_Horror.jpg" target="_blank" rel="noopener"><img src="assets/images/Crowd_Horror.jpg" alt="Work 3" /></a>
+    <a href="assets/images/pighead.jpg" target="_blank" rel="noopener"><img src="assets/images/pighead.jpg" alt="Work 4" /></a>
+    <a href="assets/images/Prostitute_Light.jpg" target="_blank" rel="noopener"><img src="assets/images/Prostitute_Light.jpg" alt="Work 5" /></a>
+    <a href="assets/images/GarlicSellerAlt.jpg" target="_blank" rel="noopener"><img src="assets/images/GarlicSellerAlt.jpg" alt="Work 6" /></a>
+    <a href="assets/images/GarlicSeller.jpg" target="_blank" rel="noopener"><img src="assets/images/GarlicSeller.jpg" alt="Work 7" /></a>
+  </aside>
 
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <div class="main-content">
+    <header>
+      <h1>Christou.Art</h1>
+      <nav>
+        <a href="#works">Work</a>
+        <a href="#exhibition">Exhibition</a>
+        <a href="#biography">Biography</a>
+        <a href="/documents/index.html">Documents</a>
+        <a href="archive/index.html" target="_blank" rel="noopener">Archive</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
     <section class="hero">
       <h2>The Expressive Legacy of Christou</h2>
@@ -250,39 +183,35 @@
     <section class="intro-section">
       <h3>"Working out Reality"</h3>
       <p>More than 150 large-scale paintings, hundreds of sketches, figures, faces, bodies – a world of lines and colors</p>
-      <a href="archive/index.html" class="archive-button" target="_blank">Visit the original ceramic archive →</a>
-  </section>
+      <a href="archive/index.html" class="archive-button" target="_blank" rel="noopener">Visit the original ceramic archive →</a>
+    </section>
+
     <section class="catalogue-access">
-  <h3>Catalogue</h3>
-  <p>See selected works of Alexandra Christou in the online catalogue.</p>
-  <div class="button-group">
-   <a href="image01.html" class="gallery-button">View Gallery Catalogue</a>
-  </div>
-</section>
+      <h3>Catalogue</h3>
+      <p>See selected works of Alexandra Christou in the online catalogue.</p>
+      <div class="button-group">
+        <a href="image01.html" class="gallery-button">View Gallery Catalogue</a>
+      </div>
+    </section>
+
     <section class="estate-section">
-  <h3>Christou Estate</h3>
-
-  <p lang="en">
-    The work of <strong>Alexandra Christou</strong> is managed by the
-    <strong>Christou Estate</strong>, a privately held artist estate.
-    The estate preserves, contextualises and advances the artist’s oeuvre
-    through exhibitions, publications and collaborations.
-  </p>
-
-  <p lang="en">
-    All copyright and reproduction matters are administered by the Christou Estate.
-  </p>
-
-  <p lang="de">
-    Das Werk von <strong>Alexandra Christou</strong> wird durch das
-    <strong>Christou Estate</strong> betreut, ein privat geführtes Artist Estate.
-    Urheberrechte und Reproduktionsfragen werden durch das Estate wahrgenommen.
-  </p>
-</section>
+      <h3>Christou Estate</h3>
+      <p lang="en">
+        The work of <strong>Alexandra Christou</strong> is managed by the
+        <strong>Christou Estate</strong>, a privately held artist estate.
+        The estate preserves, contextualises and advances the artist’s oeuvre
+        through exhibitions, publications and collaborations.
+      </p>
+      <p lang="en">All copyright and reproduction matters are administered by the Christou Estate.</p>
+      <p lang="de">
+        Das Werk von <strong>Alexandra Christou</strong> wird durch das
+        <strong>Christou Estate</strong> betreut, ein privat geführtes Artist Estate.
+        Urheberrechte und Reproduktionsfragen werden durch das Estate wahrgenommen.
+      </p>
+    </section>
 
     <footer>
-      <p>Alexandras Work is exclusively represented by the Breeder Gallery, Athens
-      https://thebreedersystem.com/</p>
+      <p>Alexandras Work is exclusively represented by the Breeder Gallery, Athens</p>
       <p>&copy; 2025 Christou Estate — a privately held artist estate</p>
       <p>Design: Häusler Studio</p>
       <p>the Photographs of the Paintings were made by Athanasios Gatos</p>
@@ -290,5 +219,3 @@
   </div>
 </body>
 </html>
-
-
