@@ -64,3 +64,18 @@ main.docs a:hover{ opacity: .75; }
 body.page-documents {
   flex-direction: column;
 }
+/* ================================
+   Video (Interview)
+   ================================ */
+.video-wrapper{
+  margin-top: 1.5rem;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
