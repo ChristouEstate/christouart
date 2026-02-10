@@ -66,6 +66,58 @@
       font-size: .85rem;
       font-weight: 500;
     }
+    /* ================================
+   Hover-Titel (Tooltip) – für Index
+   ================================ */
+
+.index-grid a{
+  position: relative; /* nötig für Tooltip */
+}
+
+/* Tooltip-Text aus title-Attribut */
+.index-grid a[title]:hover::after{
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  max-width: 60ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  padding: .4rem .55rem;
+  border-radius: 6px;
+  background: rgba(0,0,0,.88);
+  color: #fff;
+  font-size: .85rem;
+  line-height: 1.2;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* kleiner Pfeil */
+.index-grid a[title]:hover::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 4px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(0,0,0,.88);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Optional: auf Touch-Geräten Tooltip nicht erzwingen */
+@media (hover: none){
+  .index-grid a[title]::before,
+  .index-grid a[title]::after{
+    display: none;
+  }
+}
   </style>
 </head>
 
