@@ -3,62 +3,108 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Catalogue Index — Christou.Art</title>
+  <title>Catalogue — Christou.Art</title>
 
   <link rel="stylesheet" href="/catalogue-style.css" />
 
   <style>
+    /* ================================
+       Catalogue Index
+       ================================ */
+
+    body{
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
     .catalogue-index{
-      max-width: 72ch;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 2rem 1rem 3rem;
-      line-height: 1.45;
+      padding: 2.5rem 1.25rem 3.5rem;
     }
 
     .catalogue-index h1{
-      margin: 0 0 1rem 0;
+      margin: 0 0 .5rem 0;
       text-align: center;
+      font-weight: 500;
     }
 
     .catalogue-index p{
-      margin: 0 0 2rem 0;
+      margin: 0 0 2.5rem 0;
       text-align: center;
       opacity: .7;
+      font-size: .95rem;
     }
 
+    /* Grid */
     .index-grid{
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(6ch, 1fr));
-      gap: .75rem 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1.25rem;
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
+    .index-grid li{
+      margin: 0;
+    }
+
     .index-grid a{
       display: block;
-      text-align: center;
-      padding: .35rem .25rem;
+      position: relative;
       text-decoration: none;
       color: inherit;
-      border: 1px solid #ccc;
+    }
+
+    .index-grid img{
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
       border-radius: 4px;
-      font-size: .9rem;
+      border: 1px solid #ccc;
+      background: #f4f4f4;
     }
 
-    .index-grid a:hover{
-      background: #f0f0f0;
+    /* Hover: Titel */
+    .index-grid a::after{
+      content: attr(title);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: .35rem .45rem;
+      font-size: .75rem;
+      line-height: 1.25;
+      background: rgba(0,0,0,.65);
+      color: #fff;
+      opacity: 0;
+      transition: opacity .2s ease;
     }
 
+    .index-grid a:hover::after{
+      opacity: 1;
+    }
+
+    /* Navigation */
     .index-nav{
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       text-align: center;
     }
 
     .index-nav a{
       display: inline-block;
       margin: 0 .5rem;
-      padding: .5rem 1rem;
+      padding: .55rem 1.1rem;
       background: #1c1c1c;
       color: #fff;
       text-decoration: none;
@@ -66,67 +112,20 @@
       font-size: .85rem;
       font-weight: 500;
     }
-    /* ================================
-   Hover-Titel (Tooltip) – für Index
-   ================================ */
 
-.index-grid a{
-  position: relative; /* nötig für Tooltip */
-}
-
-/* Tooltip-Text aus title-Attribut */
-.index-grid a[title]:hover::after{
-  content: attr(title);
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 10px);
-  transform: translateX(-50%);
-  white-space: nowrap;
-  max-width: 60ch;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  padding: .4rem .55rem;
-  border-radius: 6px;
-  background: rgba(0,0,0,.88);
-  color: #fff;
-  font-size: .85rem;
-  line-height: 1.2;
-
-  box-shadow: 0 6px 18px rgba(0,0,0,.18);
-  z-index: 10;
-  pointer-events: none;
-}
-
-/* kleiner Pfeil */
-.index-grid a[title]:hover::before{
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 4px);
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: rgba(0,0,0,.88);
-  z-index: 10;
-  pointer-events: none;
-}
-
-/* Optional: auf Touch-Geräten Tooltip nicht erzwingen */
-@media (hover: none){
-  .index-grid a[title]::before,
-  .index-grid a[title]::after{
-    display: none;
-  }
-}
+    .index-nav a:hover{
+      background: #444;
+    }
   </style>
 </head>
 
 <body>
-  <div class="catalogue-page catalogue-index">
+  <main class="catalogue-index">
     <h1>Catalogue</h1>
-    <p>Select a work to jump directly to its page.</p>
+    <p>Select a work to view it in full.</p>
 
-      <ul class="index-grid">
+    <ul class="index-grid">
+
   <li><a href="../image01.html">01</a></li>
   <li><a href="../image02.html">02</a></li>
   <li><a href="../image03.html" title="Sophia (Rückenakt)">
@@ -241,8 +240,9 @@
 </ul>
 
     <div class="index-nav">
-  <a href="../image01.html">Start at 01 →</a>
-  <a href="../index.html">Home</a>
-  </div>
+      <a href="../image01.html">Start at 01 →</a>
+      <a href="../index.html">Home</a>
+    </div>
+  </main>
 </body>
 </html>
