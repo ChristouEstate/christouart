@@ -3,7 +3,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 # -------- Einstellungen --------
-SRC_DIR = Path("assets/images")     # <-- HIER deine Originalbilder
+SRC_DIR = Path("assets/catalogue")     # <-- HIER deine Originalbilder
 OUT_DIR = Path("assets/thumbs")     # <-- Zielordner für Thumbnails
 
 MODE = "cover"  # "cover" (crop) oder "contain" (kein crop)
