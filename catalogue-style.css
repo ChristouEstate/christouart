@@ -30,7 +30,7 @@
 ================================ */
 
 /* ================================
-   Catalogue images – hard safety
+   Final balanced image sizing
 ================================ */
 
 .catalogue-image{
@@ -42,22 +42,17 @@
   display: block;
   margin: 0 auto;
 
+  /* ruhige Standardgröße */
   width: 100%;
-  max-width: 820px;
+  max-width: 650px;     /* <<< kleiner als 800 */
 
   height: auto;
-  max-height: 65vh;   /* <<< DAS ist entscheidend */
 
+  /* nur für extreme Hochformate */
+  max-height: 75vh;
   object-fit: contain;
 }
 
-  /* entscheidend: verhindert "Bild frisst Seite" */
-  max-height: 70vh;
-  object-fit: contain;
-
-  display: block;
-  margin: 0 auto;
-}
 /* ================================
    Textblock
 ================================ */
