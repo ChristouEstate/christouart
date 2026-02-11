@@ -92,6 +92,11 @@
   object-fit: contain;
   display: block;
 }
+.catalogue-image img,
+.catalogue-img{
+  max-width: 620px !important;
+  max-height: 70vh !important;
+}
 
 /* ================================
    Navigation
