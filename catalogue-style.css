@@ -44,7 +44,7 @@
 
   /* ruhige Standardgröße */
   width: 100%;
-  max-width: 650px;     /* <<< kleiner als 800 */
+  max-width: 600px;     /* <<< kleiner als 800 */
 
   height: auto;
 
