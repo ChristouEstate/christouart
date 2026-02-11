@@ -77,6 +77,21 @@
   border-top: 1px solid #ccc;
   margin: 1.1rem 0;
 }
+/* ===== FINAL OVERRIDE: keep catalogue images readable ===== */
+
+.catalogue-image{
+  max-width: 620px;     /* <- hier steuerst du "wie groß" die Bilder wirken */
+  margin: 0 auto 1.5rem;
+}
+
+.catalogue-image img,
+.catalogue-img{
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
 
 /* ================================
    Navigation
